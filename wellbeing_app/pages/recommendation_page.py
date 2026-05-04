@@ -143,10 +143,10 @@ def team_recommendation(team_id):
     cursor.execute("""
         SELECT
             ROUND(AVG(es.ewbi_score),2)             as ewbi,
-            ROUND(AVG(ds.mental_score)*25,2)        as mental,
-            ROUND(AVG(ds.physical_score)*25,2)      as physical,
-            ROUND(AVG(ds.work_pattern_score)*25,2)  as work,
-            ROUND(AVG(ds.social_score)*25,2)        as social,
+            ROUND(AVG(ds.mental_score),2)        as mental,
+            ROUND(AVG(ds.physical_score),2)      as physical,
+            ROUND(AVG(ds.work_pattern_score),2)  as work,
+            ROUND(AVG(ds.social_score),2)        as social,
             ROUND(AVG(wp.meeting_hours),2)          as meeting,
             ROUND(AVG(wp.after_hours_work_hours),2) as after_hours,
             ROUND(AVG(wp.focus_hours),2)            as focus,
